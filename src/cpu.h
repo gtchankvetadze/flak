@@ -25,11 +25,9 @@ struct cpu {
   uint16_t PC; // Program Counter (16-bit - can address 64KB of RAM)
 };
 
-/* The Accumulator is the heavy lifter and most important. This is one of the
-rare register,
- * that can interact with the ALU.
- *
- *Index register can be compared to i subscript in C arrays. If we have a base
+/* The Accumulator is the heavy lifter and most important. 
+
+Index register can be compared to i subscript in C arrays. If we have a base
 address 0x2000 and want to jump 3 bytes, the X register holds the index value -
 0x03. Obviously math cannot be done on data sitting in memory. They have to be
 temporarily hold inside registers. The index register X explicitly holds the
